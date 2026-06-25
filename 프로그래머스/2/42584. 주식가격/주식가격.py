@@ -9,4 +9,5 @@ def solution(prices):
             if prices[j] < prices[i]:
                 break
         answer.append(sec)
+        
     return answer
