@@ -1,16 +1,13 @@
 def solution(brown, yellow):
-    all = brown + yellow
+    total = brown + yellow
     
     import math
-    
     case = []
-    for i in range(1, int(math.sqrt(all)) + 1):
-        if all % i == 0 and i <= all // i:
-            case.append([all//i, i])
     
-    for i in case:
-        if (i[0] - 2) * (i[1] - 2) == yellow:
-            return [i[0], i[1]]
-        else:
-            pass
+    for i in range(1, int(math.sqrt(total)) + 1):
+        if total % i == 0 and i <= total // i:
+            case.append([total//i, i])
             
+    for c in case:
+        if (c[0] - 2) * (c[1] - 2) == yellow:
+            return c
