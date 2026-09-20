@@ -6,7 +6,6 @@ def solution(numbers):
         while stack and numbers[stack[-1]] < n:
             answer[stack.pop()] = n
             
-            
         stack.append(i)
-    
-    return answer
+    return answer    
+        
