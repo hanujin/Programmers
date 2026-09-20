@@ -1,9 +1,9 @@
 def solution(citations):
     citations.sort(reverse=True)
-    h=0
+    answer = 0
+    # [6, 5, 3, 1, 0]
     for i, c in enumerate(citations):
         if i+1 <= c:
-            h = i+1
-        else:
-            break
-    return h
+            answer +=1
+            
+    return answer
