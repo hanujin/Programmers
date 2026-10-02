@@ -1,13 +1,13 @@
 def solution(s):
-    cnt = 0
-    num0s = 0
-    while s != "1":
-        num0 = s.count("0")
-        num0s += num0 
-        s = (len(s) - num0) * 1
-        s = bin(s)[2:]
-        cnt += 1
-        
-    list = [cnt, num0s]
+    answer = []
+    count = 0
+    num = 0
     
-    return list
+    while s != "1":
+        n = s.count("0")
+        s = bin(len(s) - n)[2:]
+        
+        count += 1
+        num += n
+    
+    return [count, num]
